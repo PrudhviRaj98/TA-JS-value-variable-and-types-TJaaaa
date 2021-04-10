@@ -7,9 +7,28 @@
   - `if` the number is odd print the message "number is odd"
 */
 
+let number = Number(prompt("number"));
+if(number%2==0){
+  console.log("number is even");
+}
+else{
+  console.log("number is odd");
+}
+
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
 
+let numberOne = Number(prompt("enter first number"));
+let numberTwo = Number(prompt("enter second number"));
+if (numberOne>numberTwo){
+  alert(`numberOne is max value $(numberOne)`)
+}
+else{
+  alert(`numberTwo is max value $(numberTwo)`)
+}
+
 // 3. Convert the above code using`?` terniary operator
+
+numberOne>numberTwo?alert(`numberOne is max value $(numberOne)`):alert(`numberTwo is max value $(numberTwo)`)
 
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
@@ -19,11 +38,63 @@
   - `else` print the message " All men must die"
 */
 
+let houseName = prompt("enter house name");
+if (houseName == "stark"){
+  console.log("winter is coming");
+}else if (houseName == "lannister"){
+  console.log("A lannister always pays his debt");
+}else{
+  console.log("All men must die")
+}
+
 // 5. Convert the above code using`?` terniary operator
+
+houseName =="stark"?console.log("winter is coming"):houseName == "lannister"?console.log("A lannister always pays his debt"):console.log("All men must die")
 
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
+
+switch(prompt("enter a month")){
+  case 1:
+    alert("days in a month 29");
+    break;
+  case 2:
+    alert("days in a month 28");
+    break;
+  case 3:
+    alert("days in a month 27");
+    break;
+  case 4:
+    alert("days in a month 26");
+    break;
+  case 5:
+    alert("days in a month 24");
+    break;
+  case 6:
+    alert("days in a month 23");
+    break;
+  case 7:
+    alert("days in a month 22");
+    break;
+  case 8:
+    alert("days in a month 21");
+    break;
+  case 9:
+    alert("days in a month 20");
+    break;
+  case 10:
+    alert("days in a month 19");
+    break;
+  case 11:
+    alert("days in a month 18");
+    break;
+  case 12:
+    alert("days in a month 17");
+    break;
+     
+}
+
 
 /* 7.
 - Write a program that take the salery of the user using prompt and alert the in -hand amount.You will find out the in -hand amount by deducting the tax amoun from salery.Conditions are given below.
@@ -32,6 +103,21 @@
   - `Salary > 50000` tax is 30 %
 
 */
+
+let salary =Number(prompt("enter the salary"));
+let inHand;
+let taxAmount;
+if(salary<=20000){
+  taxAmount = 0.1;
+  inHand = salary - taxAmount;
+}else if (salary<=40000)  {
+  taxAmount = (20/100);
+  inHand = salary - taxAmount;
+}else {
+  taxAmount=(30/100);
+  inHand = salary - taxAmount;
+}
+
 
 //  if..else vs switch
 
@@ -45,6 +131,19 @@ Implement the condition give below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 
 */
+let marks = Number(prompt("enter marks"));
+if (marks > 100){
+  alert("marks cant't be greater than 100")
+}else if(marks > 80 && marks < 100) {
+  alert("Grade A")
+}else if(marks > 50 && marks < 80) {
+  alert("Grade B")
+}else if(marks > 30 && marks < 50) {
+  alert("Grade C")
+}else{
+  alert("Grade D")
+}
+
 
 /* 9. Weather app
 
@@ -55,3 +154,16 @@ Implement the condition give below using`if..else` and`switch` statement.
   - If`freezing` alert`Get your sweeter on`
   - Anything else should alert`Not a valid input`
 */
+
+let weather = prompt("enter conndition of the wheather");
+if (weather = "sunny"){
+  alert("wear a T-shirt");
+}else if (weather == "rainy"){
+  alert("dont't forget to take your raincoat");
+}else if (weather == "hot"){
+  alert("get a hanky");
+}else if (weather == "freezing"){
+  alert("get your sweeter on");
+}else {
+  alert("not a valid input");
+}
