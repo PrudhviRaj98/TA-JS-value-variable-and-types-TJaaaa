@@ -8,11 +8,11 @@
 */
 
 let number = Number(prompt("number"));
-if(number%2==0){
-  console.log("number is even");
+if(number % 2 == 0){
+  alert("number is even");
 }
 else{
-  console.log("number is odd");
+  alert("number is odd");
 }
 
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
@@ -20,15 +20,15 @@ else{
 let numberOne = Number(prompt("enter first number"));
 let numberTwo = Number(prompt("enter second number"));
 if (numberOne>numberTwo){
-  alert(`numberOne is max value $(numberOne)`)
+  alert(`numberOne is max value ${numberOne}`)
 }
 else{
-  alert(`numberTwo is max value $(numberTwo)`)
+  alert(`numberTwo is max value ${numberTwo}`)
 }
 
 // 3. Convert the above code using`?` terniary operator
 
-numberOne>numberTwo?alert(`numberOne is max value $(numberOne)`):alert(`numberTwo is max value $(numberTwo)`)
+numberOne > numberTwo ? alert(`numberOne is max value $(numberOne)`):alert(`numberTwo is max value $(numberTwo)`)
 
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
@@ -39,23 +39,23 @@ numberOne>numberTwo?alert(`numberOne is max value $(numberOne)`):alert(`numberTw
 */
 
 let houseName = prompt("enter house name");
-if (houseName == "stark"){
-  console.log("winter is coming");
-}else if (houseName == "lannister"){
-  console.log("A lannister always pays his debt");
+if (houseName === "stark"){
+  alert("winter is coming");
+}else if (houseName === "lannister"){
+  alert("A lannister always pays his debt");
 }else{
-  console.log("All men must die")
+  alert("All men must die")
 }
 
 // 5. Convert the above code using`?` terniary operator
 
-houseName =="stark"?console.log("winter is coming"):houseName == "lannister"?console.log("A lannister always pays his debt"):console.log("All men must die")
+houseName ==="stark"?alert("winter is coming"):houseName === "lannister"?alert("A lannister always pays his debt"):alert("All men must die")
 
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
-
-switch(prompt("enter a month")){
+let month = Number(prompt("enter month number"))
+switch(month){
   case 1:
     alert("days in a month 29");
     break;
@@ -92,7 +92,8 @@ switch(prompt("enter a month")){
   case 12:
     alert("days in a month 17");
     break;
-     
+  default:
+    alert("not a valid ");
 }
 
 
@@ -116,6 +117,17 @@ if(salary<=20000){
 }else {
   taxAmount=(30/100);
   inHand = salary - taxAmount;
+}
+
+switch(true){
+  case salary<=20000:
+    inHand = (salary * 10)/100;
+  case salary<=40000:
+    inHand = (salary * 20)/100;
+    break
+  case salary<=40000:
+    inHand = (salary * 30)/100;
+    break   
 }
 
 
@@ -144,6 +156,19 @@ if (marks > 100){
   alert("Grade D")
 }
 
+switch(true){
+  case marks > 100:
+    alert("marks cant't be greater than 100");
+    break;
+  case marks > 80 && marks < 100 :
+    alert("marks cant't be greater than 100");
+    break;
+  case marks > 50 && marks < 80:
+    alert("marks cant't be greater than 100");
+    break;
+  default:
+    alert("not valid");
+}
 
 /* 9. Weather app
 
@@ -166,4 +191,22 @@ if (weather = "sunny"){
   alert("get your sweeter on");
 }else {
   alert("not a valid input");
+}
+
+switch(weather){
+  case "sunny":
+    alert("wear a T-shirt");
+    break;
+  case "rainy":
+    alert("wear a T-shirt");
+    break;
+  case "hot":
+    alert("wear a T-shirt");
+    break;
+  case "freezing":
+    alert("wear a T-shirt");
+    break;
+  default:
+    alert("not a valid");
+    break;
 }
