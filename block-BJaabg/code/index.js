@@ -14,14 +14,19 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 
-for(PHONE_PRICE = 99.99 ; bank_balance > PHONE_PRICE + TAX_RATE + ACCESSORY_PRICE ; bank_balance = bank_balance - (PHONE_PRICE + TAX_RATE + ACCESSORY_PRICE) ){
-    console.log(bank_balance);
-    if(bank_balance == SPENDING_THRESHOLD){
-
-    }
-    else if(bank_balance < PHONE_PRICE){
-        alert(`running out balance`);
+while(amount < bank_balance){
+    amount += PHONE_PRICE;
+    if(amount < SPENDING_THRESHOLD){
+        amount += ACCESSORY_PRICE;
     }
 }
 
+let tax = amount * TAX_RATE;
+
+let taxedAmount = amount + tax;
+if (taxedAmount < bank_balance){
+    console.log(`you can afford it`);
+}else{
+    console.log(`you can't afford buying the phone`);
+}
 // ⛑ Answer of the above will `$334.76`.
