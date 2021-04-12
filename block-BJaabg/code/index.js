@@ -13,6 +13,15 @@ const ACCESSORY_PRICE = 9.99;
 
 var bank_balance = 303.91;
 var amount = 0;
-// your code goes here
+
+for(PHONE_PRICE = 99.99 ; bank_balance > PHONE_PRICE + TAX_RATE + ACCESSORY_PRICE ; bank_balance = bank_balance - (PHONE_PRICE + TAX_RATE + ACCESSORY_PRICE) ){
+    console.log(bank_balance);
+    if(bank_balance == SPENDING_THRESHOLD){
+
+    }
+    else if(bank_balance < PHONE_PRICE){
+        alert(`running out balance`);
+    }
+}
 
 // ⛑ Answer of the above will `$334.76`.
