@@ -12,14 +12,14 @@ Write a program that asks the user his/her age and check for the following condi
 */
 
 let age = +prompt(`enter the age`);
-if (12>age>55){
-  console.log(`You can praticipate in the marathon`);
-}else if (4>age>11){
-  console.log(`You are too young to participate in the marathon`);
+if (age>12 && age<55){
+  alert(`You can praticipate in the marathon`);
+}else if (age>4&&age<11){
+  alert(`You are too young to participate in the marathon`);
 }else if (age<4){
-  console.log(`Hey Kiddo! Can You Walk ?`);
+  alert(`Hey Kiddo! Can You Walk ?`);
 }else{
-  console.log(`You are too old to participate in the marthon`);
+  alert(`You are too old to participate in the marthon`);
 }
 // Loops
 /*
@@ -31,12 +31,14 @@ n = 7 => output: heeeeeeello
 */
 // [Your code goes here]
 
-let n = +prompt(`enter the value`);
-let result = "";
-for (let k = 1; k <= n; k++){
+let count = +prompt(`enter the value`);
+const start = "h";
+const end = "llo";
+let middle = "";
+for (let i = 0; k <count; i++){
   result += "e";
 }
-console.log(`h${result}llo`);
+console.log(start + middle + end);
 
 
 /*
@@ -44,12 +46,12 @@ Program to calculate the sum of first n natural numbers(1,2,3...n are known as n
 👇
 */
 // [Your code goes here]
-let sum =0;
+let sum = 0;
 let natural = +prompt(`natural numbers`);
 for(let i=1;i<=natural;i++){
   sum = sum+i;
 }
-console.log(`sum is ${sum}`);
+alert(`sum is ${sum}`);
 
 /* Switch Statement
 
@@ -103,7 +105,7 @@ switch(value){
     alert(`${value} is equal to 1`);
     break;
   default:
-    alert(`enter valid input`);
+    alert(`PLEASE TRY AGAIN`);
 }
 
 /*
