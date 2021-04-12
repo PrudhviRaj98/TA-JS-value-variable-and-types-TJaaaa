@@ -15,7 +15,7 @@ console.log(`user is ${user} username is ${userName}`);
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
-let numA = Number(prompt("enter first number")),numB =Number(prompt("enter second number")) ;
+let numA = +prompt("enter first number"),numB =+prompt("enter second number");
 let sum = numA + numB;
 alert(`sum is ${sum}`);
 
@@ -32,7 +32,7 @@ for (let j = 0; j <= 10; j++) {
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 
-for (let i = 9; i>= 0 ; i--){
+for (let i = 9; i>= 1 ; i--){
     if(i % 2 !==0){
         console.log(i);
     }
@@ -44,7 +44,7 @@ let sum = 0;
 while ( i>0){
     sum = sum + i;
     console.log(sum);
-    i--;
+    i--; 
 }
 
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
@@ -72,7 +72,7 @@ Example:
 
 */
 let numA = Number(prompt(`enter first number`)),numB = Number(prompt(`enter second number`));
-if(String){
+if(isNaN(num1)||isNaN(num2)){
     alert(`enter valid value`);
 }else{
     alert(numA === numB);
